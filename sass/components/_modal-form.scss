@@ -18,7 +18,14 @@
   letter-spacing: 0.01em;
   color: var(--secondary-color);
   margin-bottom: 10px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    .modal-form-input:focus + & {
+      color: var(--accent-color);
+    }
+  }
 }
+
 .modal-form-wraper {
   position: relative;
   display: block;
@@ -107,8 +114,8 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  font-size: 14px;
-  line-height: 1.71px;
+  font-size: 12px;
+  line-height: 1.17px;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
 
@@ -122,6 +129,11 @@
     cursor: pointer;
     margin-right: 7px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71px;
   }
 
   .modal-form-checkbox:checked + &::before {

@@ -140,3 +140,23 @@
     fill: var(--accent-color);
   }
 }
+
+.header__menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.header__menu-icon__close {
+  display: none;
+
+  .header__menu-button.is-open & {
+    display: block;
+  }
+}
+
+.header__menu-button.is-open .header__menu-icon__menu {
+  display: none;
+}

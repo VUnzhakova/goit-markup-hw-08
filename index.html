@@ -26,6 +26,14 @@
           <a class="header-logo" href="#">
             <span class="header-logo__accent">Web</span>Studio</a
           >
+          <button  type="button" class="header__menu-button is-open"data-menu-button aria-expanded="false"><svg width="40" height="40" aria-label="Переключатель мобильного меню"
+            >
+            <use class="header__menu-icon__close" href="./images/sprite.svg#close"></use>
+            <use class="header__menu-icon__menu"href="./images/sprite.svg#menu_nav"></use>
+          </svg>
+            
+          </button>
+          <div class="header__content-menu">
           <ul class="site-nav">
             <li class="site-nav__item">
               <a
@@ -64,6 +72,7 @@
             >
           </li>
         </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -465,7 +474,7 @@
         <form action="#" class="modal-form">
           <p class="modal-form-head">Оставьте свои данные, мы вам перезвоним</p>
           <label class="modal-form-field"
-            >Имя
+            > <span class="modal-form-title">Имя</span>
             <span class="modal-form-wraper">
               <input type="text" class="modal-form-input" name="user-name" />
               <svg class="modal-form-icon" width="18" height="18">
@@ -473,8 +482,9 @@
               </svg>
             </span>
           </label>
+          
           <label class="modal-form-field"
-            >Телефон
+            ><span class="modal-form-title">Телефон</span>
             <span class="modal-form-wraper">
               <input type="tel" class="modal-form-input" name="user-tel" />
               <svg class="modal-form-icon" width="18" height="18">
@@ -483,7 +493,7 @@
             </span>
           </label>
           <label class="modal-form-field"
-            >Почта
+            ><span class="modal-form-title">Почта</span>
             <span class="modal-form-wraper">
               <input type="email" class="modal-form-input" name="user-email" />
               <svg class="modal-form-icon" width="18" height="18">
@@ -492,7 +502,7 @@
             </span>
           </label>
           <label class="modal-form-field form-massage"
-            >Комментарий
+            ><span class="modal-form-title">Комментарий</span>
             <textarea
               class="modal-form-massage"
               name="user-massage"
@@ -514,4 +524,6 @@
     </div>
   </body>
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
+
 </html>
