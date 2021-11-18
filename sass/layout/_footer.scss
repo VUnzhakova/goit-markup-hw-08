@@ -16,6 +16,11 @@
 }
 .secondary-footer-section {
   flex-grow: 1;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 
 .addres-item {
@@ -57,7 +62,14 @@
 }
 
 .footer-social {
-  margin-left: 70px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .footer-social-icon {
@@ -85,7 +97,13 @@
 // Форма в футере
 
 .footer-form {
-  margin-left: 93px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .footer-form-head {
@@ -111,6 +129,9 @@
   border-radius: 4px;
   background-color: transparent;
   color: var(--accent-color);
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 }
 
 .footer-form-icon {
