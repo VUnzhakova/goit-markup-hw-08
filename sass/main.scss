@@ -1,0 +1,25 @@
+// BASE
+
+@import "./base/tags";
+@import "./base/variables";
+
+// COMPONENTS
+@import "./components/logo";
+@import "./components/container";
+@import "./components/modal-form";
+@import "./components/modal";
+@import "./components/section-tilles";
+
+// LAYOUT
+
+@import "./layout/benefits";
+@import "./layout/clients";
+@import "./layout/competence";
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/portfolio";
+@import "./layout/team";
+
+// UTILS
+@import "./utils/visually-hidden";

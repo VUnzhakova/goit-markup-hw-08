@@ -1,0 +1,125 @@
+.header {
+  border-bottom: solid 1px #ececec;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav__item {
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.site-nav__link-current {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 4px;
+    border-radius: 2px;
+    bottom: -1px;
+    display: block;
+    background-color: var(--accent-color);
+  }
+}
+
+// Шапка контакты
+
+.contact-links {
+  display: flex;
+  margin-left: auto;
+  align-content: center;
+}
+
+.contact-links__item {
+  display: flex;
+  align-content: center;
+
+  & + & {
+    margin-left: 50px;
+  }
+}
+
+.contact-links__link {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}
+
+.contact-links__icon {
+  margin-right: 10px;
+  fill: var(--secondary-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contact-links__link:focus & {
+    fill: var(--accent-color);
+  }
+  .contact-links__item:hover & {
+    fill: var(--accent-color);
+  }
+}
