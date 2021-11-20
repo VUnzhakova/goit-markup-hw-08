@@ -8,7 +8,7 @@
   right: 15px;
   cursor: pointer;
 
-   &:hover,
+  &:hover,
   &:focus {
     fill: $accent-color;
   }
@@ -23,7 +23,7 @@
     display: none;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 480px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
