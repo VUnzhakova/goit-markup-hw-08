@@ -1,25 +1,19 @@
-// BASE
+@import "components/nullstyle";
+@import "components/general";
+@import "components/header";
+@import "components/nav";
+@import "components/contacts";
 
-@import "./base/tags";
-@import "./base/variables";
-
-// COMPONENTS
-@import "./components/logo";
-@import "./components/container";
-@import "./components/modal-form";
-@import "./components/modal";
-@import "./components/section-tilles";
-
-// LAYOUT
-
-@import "./layout/benefits";
-@import "./layout/clients";
-@import "./layout/competence";
-@import "./layout/footer";
-@import "./layout/header";
-@import "./layout/hero";
-@import "./layout/portfolio";
-@import "./layout/team";
-
-// UTILS
-@import "./utils/visually-hidden";
+@import "components/mobile-menu";
+@import "components/section-hero";
+@import "components/modal";
+@import "components/form";
+@import "components/section-particular";
+@import "components/section-work-photos";
+@import "components/section-teams";
+@import "components/section-partners";
+@import "components/section-filter";
+@import "components/feature";
+@import "components/social";
+@import "components/footer";
+@import "components/footer-form";

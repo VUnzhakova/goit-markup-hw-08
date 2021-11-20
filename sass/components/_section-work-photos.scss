@@ -1,0 +1,32 @@
+@import "../utils/colors";
+@import "../utils/transition";
+
+.section-work-photos {
+	display: none;
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		position: relative;
+	}
+
+	&__text {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 27px 0;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		color: getColor("revers-color");
+		background: rgba(47, 48, 58, 0.8);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.section-work-photos {
+		display: block;
+	}
+}

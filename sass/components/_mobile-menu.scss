@@ -1,0 +1,131 @@
+@import "../utils/colors";
+@import "../utils/transition";
+
+@media (max-width: 767px) {
+	.page-header__item:not(:first-child) {
+		display: none;
+	}
+}
+
+.menu-toggle {
+	min-height: 40px;
+	min-width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	border-radius: 50%;
+	outline: none;
+}
+
+@media (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	color: getColor("blue-color");
+}
+
+.menu-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	padding: 48px 40px;
+	z-index: 999;
+
+	background: getColor("main-bg-color");
+
+	transform: translateX(100%);
+	transition: transform getTransition("time-anime") getTransition("time-function");
+}
+
+.menu-container.is-open {
+	transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+
+.mobile-menu {
+	&__item {
+		margin-bottom: 32px;
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 1.175;
+		letter-spacing: 0.02em;
+
+		color: inherit;
+
+		transition: color getTransition("time-anime") getTransition("time-function");
+		&:hover,
+		&:focus {
+			color: getColor("blue-color");
+		}
+	}
+
+	&__link--active {
+		color: getColor("blue-color");
+	}
+}
+
+.menu-contacts {
+	&__item:first-child {
+		margin-bottom: 32px;
+	}
+	&__item:last-child {
+		margin-bottom: 64px;
+	}
+
+	&__link--tel {
+		font-weight: 500;
+		font-size: 34px;
+		line-height: 1.176;
+		letter-spacing: 0.02em;
+		color: getColor("blue-color");
+	}
+
+	&__link--email {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 1.167;
+		letter-spacing: 0.02em;
+		color: getColor("another-color");
+	}
+}
+
+.menu-sociales {
+	display: flex;
+	&__item:not(:last-child) {
+		padding-right: 10px;
+		margin-right: 10px;
+		border-right: 1px solid rgba(33, 33, 33, 0.2);
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.22;
+		letter-spacing: 0.02em;
+
+		color: getColor("blue-color");
+	}
+}

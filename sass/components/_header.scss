@@ -1,0 +1,47 @@
+@import "../utils/colors";
+@import "../utils/transition";
+
+.page-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	z-index: 100;
+	background: getColor("main-bg-color");
+	border-bottom: 1px solid #ececec;
+	&__list {
+		padding: 0 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {
+		display: flex;
+	}
+}
+
+.logo {
+	display: inline-block;
+	padding: 16px 0;
+
+	font-family: Raleway;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.2;
+
+	color: getColor("blue-color");
+	&__text--black {
+		color: getColor("main-color");
+	}
+	&__text--white {
+		color: getColor("revers-color");
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.logo {
+		padding: 26px 0;
+	}
+}

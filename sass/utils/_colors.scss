@@ -1,0 +1,17 @@
+$colors: (
+	"main-bg-color": #ffffff,
+	"revers-bg-color": #2f303a,
+	"another-bg-color": #f5f4fa,
+	"link-hf-color": #2196f3,
+	"main-color": #212121,
+	"revers-color": #ffffff,
+	"another-color": #757575,
+	"blue-color": #2196f3,
+	"button-bg-color": #2196f3,
+	"button-bg-hf-color": #188ce8,
+	"input-border-color": #2196f3,
+);
+
+@function getColor($key) {
+	@return map-get($colors, $key);
+}
