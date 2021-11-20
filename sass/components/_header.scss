@@ -51,7 +51,7 @@ header {
     margin-top: auto;
     margin-bottom: auto;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 480px) and (max-width: 768px) {
     display: none;
   }
   @media screen and (min-width: 1200px) {
@@ -99,7 +99,7 @@ header {
   &::after {
     position: absolute;
     display: block;
-    content: '';
+    content: "";
 
     width: 100%;
     left: 0;
