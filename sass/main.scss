@@ -1,45 +1,27 @@
-@import './utils/variables';
-@import './utils/recet';
-@import './utils/mixin';
-@import './utils/breakpoints';
+// UTILS //
+@import "./utils/variables";
+@import "./utils/recet";
+@import "./utils/mixin";
+@import "./utils/breakpoints";
 
+// BASE //
+@import "./base/body";
+@import "./base/container-section";
 
-@import './base/body';
-@import './base/container-section';
+@import "./components/header";
+@import "./components/header-logo";
+@import "./components/mobile-menu";
 
-@import './components/header';
-@import './components/header-logo';
-@import './components/mobile-menu';
-
-
-@import './components/hero';
-
-@import './components/features';
-
-@import './components/examples';
-
-@import './components/team';
-
-@import './components/clients';
-
-@import './components/footer';
-
-@import './components/footer-logo';
-
-@import './components/footer__form';
-
-@import './components/modal';
-
-@import './components/modal-form';
-
-@import './components/filter';
-
-@import './components/projects';
-
-
-
-
-
-
-
-
+// COMPONENTS //
+@import "./components/hero";
+@import "./components/features";
+@import "./components/examples";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/footer-logo";
+@import "./components/footer__form";
+@import "./components/modal";
+@import "./components/modal-form";
+@import "./components/filter";
+@import "./components/projects";
