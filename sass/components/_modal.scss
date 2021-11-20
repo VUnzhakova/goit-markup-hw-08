@@ -1,72 +1,85 @@
-@import "../utils/colors";
-@import "../utils/transition";
-
 .backdrop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-	background: rgba(0, 0, 0, 0.2);
-	opacity: 1;
+  width: 100%;
+  height: 100%;
 
-	transition: opacity getTransition("time-anime") getTransition("time-function");
-	&.is-hidden {
-		opacity: 0;
-		pointer-events: none;
-	}
-	&.is-hidden .modal {
-		opacity: 0;
-		transform: translate(-50%, -50%) scale(1.1);
-	}
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity $duration $cubic, visibility $duration $cubic;
 }
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform $duration $cubic;
+}
+
 .modal {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 450px;
-	height: 609px;
-	padding: 40px;
+  width: 100%;
 
-	background: getColor("main-bg-color");
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+height: 609px;
 
-	color: getColor("main-color");
+  }
 
-	opacity: 1;
-	transform: translate(-50%, -50%) scale(1);
-	transition: transform getTransition("time-anime") getTransition("time-function"),
-		opacity getTransition("time-anime") getTransition("time-function");
-	&__button-close {
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		top: 8px;
-		right: 8px;
-		width: 30px;
-		height: 30px;
 
-		background-color: getColor("main-bg-color");
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		border-radius: 50%;
-		box-sizing: border-box;
-		cursor: pointer;
-		fill: currentColor;
-		transition: fill getTransition("time-anime") getTransition("time-function");
-		&:hover,
-		&:focus {
-			fill: getColor("link-hf-color");
-		}
-	}
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 4px;
+
+  opacity: 1;
+  transition: opacity $duration $cubic, translate $duration $cubic,
+    transform $duration $cubic;
+
+  transform: translate(-50%, -50%) scale(1);
+
+
+  @media screen and (min-width: 1200px) {
+      width: 528px;
+
+  }
 }
 
-@media screen and (min-width: 1200px) {
-	.modal {
-		width: 528px;
-		height: 581px;
-	}
+.modal__btn {
+@include centeredFlex;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $primary-white-color;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+
+ 
+  cursor: pointer;
+  padding: 0;
+  fill: #000000;
+
+  transition: fill $duration $cubic;
+
+&--accent:hover, &--accent:focus {
+  fill: $accent-color;
+}
+
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
