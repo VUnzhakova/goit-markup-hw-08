@@ -4,7 +4,7 @@ header {
 
 .header__container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   position: relative;
 }
 
@@ -48,8 +48,6 @@ header {
 .contacts {
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
   }
   @media screen and (max-width: 767px) {
     display: none;
@@ -76,6 +74,9 @@ header {
 }
 
 .contacts__link {
+  display: flex;
+  align-items: center;
+
   @media screen and (min-width: 1200px) {
     @include centeredFlex;
   }

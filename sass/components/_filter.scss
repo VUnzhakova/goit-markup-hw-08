@@ -1,19 +1,24 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
 
   @media screen and (min-width: 1200px) {
-        justify-content: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: center;
+    margin-bottom: 30px;
   }
 }
 
-
-
 .filter__item:not(:last-child) {
   margin-right: 8px;
-
 }
 
 .filter__item:nth-child(-n + 3) {
@@ -23,9 +28,6 @@
 }
 
 .filter__btn {
-
-  
-
   padding: 6px 22px;
 
   font-weight: 500;
@@ -40,7 +42,8 @@
   color: $title-text-color;
   background-color: $background-color;
 
-  transition: background-color $duration $cubic, color $duration $cubic, box-shadow $duration $cubic;
+  transition: background-color $duration $cubic, color $duration $cubic,
+    box-shadow $duration $cubic;
 
   &:hover,
   &:focus {
