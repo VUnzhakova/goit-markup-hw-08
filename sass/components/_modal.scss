@@ -34,20 +34,20 @@
     transform $duration $cubic;
 
   @media screen and (max-width: 767px) {
-    width: 450px;
+    max-width: 450px;
 
     position: relative;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 450px;
+    max-width: 450px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
   }
   @media screen and (min-width: 1200px) {
-    width: 528px;
+    max-width: 528px;
     position: absolute;
     top: 50%;
     left: 50%;
